@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>PIA - Proccesamiento Imagenes</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.4/dist/mindar-image.prod.js"></script>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.4/dist/mindar-image-aframe.prod.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+  
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+
+  <video id="cameraFeed" autoplay playsinline muted></video>
+
+  <div id="idle-screen" class="hidden">
+    <img src="assets/images/portada1.png" alt="Esperando detección" />
+    <div id="idle-overlay">
+      <h1 id="welcome-title">  ¡BIENVENIDO!  Mundial 2026</h1>
+      <div id="idle-buttons">
+
+        <button id="idleTriviaBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-lg" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.475 5.458c-.284 0-.514-.237-.47-.517C4.28 3.24 5.576 2 7.825 2c2.25 0 3.767 1.36 3.767 3.215 0 1.344-.665 2.288-1.79 2.973-1.1.659-1.414 1.118-1.414 2.01v.03a.5.5 0 0 1-.5.5h-.77a.5.5 0 0 1-.5-.495l-.003-.2c-.043-1.221.477-2.001 1.645-2.712 1.03-.632 1.397-1.135 1.397-2.028 0-.979-.758-1.698-1.926-1.698-1.009 0-1.71.529-1.938 1.402-.066.254-.278.461-.54.461h-.777ZM7.496 14c.622 0 1.095-.474 1.095-1.09 0-.618-.473-1.092-1.095-1.092-.606 0-1.087.474-1.087 1.091S6.89 14 7.496 14"/>
+          </svg>
+        </button>
+
+        <button id="idleStatsBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">   
+            <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1z"/>
+          </svg>
+        </button>
+
+    
+      </div>
+    </div>
+  </div>
+
+  <div id="ui">
+
+    <div id="infoCard" class="card" style="display:none;">
+      <button class="closeBtn" id="closeInfo"></button>
+      <h2 id="cardTitle">País</h2>
+      <div id="playersList"></div> 
+    </div>
+
+    <div id="controls">     
+      <button id="btnAnimateModel">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+          <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
+          <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/>
+        </svg>
+      </button>
+      <button id="btnVideo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-film" viewBox="0 0 16 16">
+          <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm4 0v6h8V1zm8 8H4v6h8zM1 1v2h2V1zm2 3H1v2h2zM1 7v2h2V7zm2 3H1v2h2zm-2 3v2h2v-2zM15 1h-2v2h2zm-2 3v2h2V4zm2 3h-2v2h2zm-2 3v2h2v-2zm2 3h-2v2h2z"/>
+        </svg>
+      </button>
+      <button id="btnCelebrate">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trophy-fill" viewBox="0 0 16 16">
+          <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935"/>
+        </svg> 
+      </button> 
+      <button id="btnCapture">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stop-fill" viewBox="0 0 16 16">
+          <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5"/>
+        </svg>
+      </button>
+      <button id="btnReturn" style="display:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
+          <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+        </svg>
+      </button>
+
+      <button id="btnViewAR"> AR</button>
+
+      <button id="btnBackCards" style="display:none;">Jugadores</button>
+
+
+    </div>
+
+    <div id="hint">
+      📸 Apunta la cámara a una bandera (México / EE.UU / Japón)
+    </div>
+  
+  </div>
+
+  
+  <div id="filter-menu">
+    <button id="toggleFilters">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eyedropper" viewBox="0 0 16 16">
+        <path d="M13.354.646a1.207 1.207 0 0 0-1.708 0L8.5 3.793l-.646-.647a.5.5 0 1 0-.708.708L8.293 5l-7.147 7.146A.5.5 0 0 0 1 12.5v1.793l-.854.853a.5.5 0 1 0 .708.707L1.707 15H3.5a.5.5 0 0 0 .354-.146L11 7.707l1.146 1.147a.5.5 0 0 0 .708-.708l-.647-.646 3.147-3.146a1.207 1.207 0 0 0 0-1.708zM2 12.707l7-7L10.293 7l-7 7H2z"/>
+      </svg>
+    </button>
+    <div id="filters" style="display:none;">
+      <button class="filter-btn" data-filter="none">Normal</button>
+      <button class="filter-btn" data-filter="bw">Blanco y Negro</button>
+      <button class="filter-btn" data-filter="warm">Cálido</button>
+      <button class="filter-btn" data-filter="cool">Frío</button>
+      <button class="filter-btn" data-filter="darkmoon">DarkMoon</button>
+    </div>
+  </div>
+
+  
+  <a-scene
+    id="ar-scene"
+    mindar-image="imageTargetSrc: assets/targets/targetS.mind; maxTrack: 1;"
+    vr-mode-ui="enabled: false"
+    effects="sepia,grayscale,hue-rotate,vignette"
+    embedded
+    color-space="sRGB"
+    renderer="colorManagement: true, physicallyCorrectLights: true">
+
+    <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+    <a-entity id="target-0" mindar-image-target="targetIndex: 0"></a-entity>
+    <a-entity id="target-1" mindar-image-target="targetIndex: 1"></a-entity>
+    <a-entity id="target-2" mindar-image-target="targetIndex: 2"></a-entity>
+
+    <a-entity id="target-3" mindar-image-target="targetIndex: 3"></a-entity>
+    <a-entity id="target-4" mindar-image-target="targetIndex: 4"></a-entity>
+    <a-entity id="target-5" mindar-image-target="targetIndex: 5"></a-entity>
+
+    <a-entity id="target-6" mindar-image-target="targetIndex: 6"></a-entity>
+    <a-entity id="target-7" mindar-image-target="targetIndex: 7"></a-entity>
+    <a-entity id="target-8" mindar-image-target="targetIndex: 8"></a-entity>
+
+    <a-entity id="target-9" mindar-image-target="targetIndex: 9"></a-entity>
+    <a-entity id="target-10" mindar-image-target="targetIndex: 10"></a-entity>
+    <a-entity id="target-11" mindar-image-target="targetIndex: 11"></a-entity>
+
+    <a-entity id="target-12" mindar-image-target="targetIndex: 12"></a-entity>
+    <a-entity id="target-13" mindar-image-target="targetIndex: 13"></a-entity>
+    <a-entity id="target-14" mindar-image-target="targetIndex: 14"></a-entity>
+
+    <a-entity id="target-15" mindar-image-target="targetIndex: 15"></a-entity>
+    <a-entity id="target-16" mindar-image-target="targetIndex: 16"></a-entity>
+    <a-entity id="target-17" mindar-image-target="targetIndex: 17"></a-entity>
+
+    <a-entity id="target-18" mindar-image-target="targetIndex: 18"></a-entity>
+    <a-entity id="target-19" mindar-image-target="targetIndex: 19"></a-entity>
+    <a-entity id="target-20" mindar-image-target="targetIndex: 20"></a-entity>
+
+    <a-entity id="target-21" mindar-image-target="targetIndex: 21"></a-entity>
+    <a-entity id="target-22" mindar-image-target="targetIndex: 22"></a-entity>
+    <a-entity id="target-23" mindar-image-target="targetIndex: 23"></a-entity>
+
+    <a-entity id="target-24" mindar-image-target="targetIndex: 24"></a-entity>
+    <a-entity id="target-25" mindar-image-target="targetIndex: 25"></a-entity>
+    <a-entity id="target-26" mindar-image-target="targetIndex: 26"></a-entity>
+
+    <a-entity id="target-27" mindar-image-target="targetIndex: 27"></a-entity>
+    <a-entity id="target-28" mindar-image-target="targetIndex: 28"></a-entity>
+    <a-entity id="target-29" mindar-image-target="targetIndex: 29"></a-entity>
+
+    <a-entity id="target-30" mindar-image-target="targetIndex: 30"></a-entity>
+    <a-entity id="target-31" mindar-image-target="targetIndex: 31"></a-entity>
+    <a-entity id="target-32" mindar-image-target="targetIndex: 32"></a-entity>
+
+    <a-entity id="target-33" mindar-image-target="targetIndex: 33"></a-entity>
+    <a-entity id="target-34" mindar-image-target="targetIndex: 34"></a-entity>
+    <a-entity id="target-35" mindar-image-target="targetIndex: 35"></a-entity>
+
+    <a-entity id="target-36" mindar-image-target="targetIndex: 36"></a-entity>
+    <a-entity id="target-37" mindar-image-target="targetIndex: 37"></a-entity>
+    <a-entity id="target-38" mindar-image-target="targetIndex: 38"></a-entity>
+
+    <a-entity id="modelContainer" position="0 -0.2 0" visible="false">
+   
+    </a-entity>
+
+
+    <a-entity id="filter-light" light="type: ambient; color: #ffffff; intensity: 1"></a-entity>
+    <a-plane id="filter-color" position="0 0 -5" width="20" height="20" visible="false" material="color: #ffffff; opacity: 0.15; transparent: true"></a-plane>
+
+
+  </a-scene>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/aframe-effects@1.1.0/dist/aframe-effects.min.js"></script>
+
+
+  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>

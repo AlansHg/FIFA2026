@@ -1,0 +1,160 @@
+
+
+@import url("Idle.css");
+@import url("EstadisticasJs.css");
+@import url("TriviaJs.css");
+
+@import url("FiltrosJs.css");
+
+@import url("Cards.css");
+
+@import url("VideoJs.css");
+
+@import url("Galeria.css");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #00000000;
+  font-family: 'Inter', system-ui, Arial;
+}
+
+#ar-scene {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+
+
+/* ------------------------------------------- MODDAL ESTADISTICAS -------------------------------------- */
+
+
+
+/* ------------------------------------------- MODAL TRIVIA -------------------------------------- */
+
+/* ------------------------------------------ MENU FILTROS -------------------------------------- */
+
+
+
+
+
+
+
+
+ .celebration {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    animation: pop 1s ease forwards;
+    color: gold;
+    z-index: 1000;
+
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 0; }
+    }
+
+  }
+
+
+  
+
+
+/*
+@media (max-width: 600px) {
+  .player-card {
+    width: 240px;
+  }
+  .nav-btn.left { left: -40px; }
+  .nav-btn.right { right: -40px; }
+}
+
+*/
+
+
+
+
+
+
+
+
+/* === Cámara con filtros === */
+#cameraFeed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0;
+  transition: filter 0.5s ease;
+  background: #000;
+}
+
+/* Filtros notables */
+.filter-none   { filter: none; }
+.filter-bw     { filter: grayscale(100%) contrast(1.5) brightness(1.1); }
+.filter-warm   { filter: sepia(50%) saturate(2) brightness(1.3) hue-rotate(-15deg); }
+.filter-cool   { filter: saturate(1.8) brightness(1.2) hue-rotate(200deg) contrast(1.3); }
+.filter-darkmoon { filter: brightness(0.7) contrast(1.5) saturate(1.2) hue-rotate(220deg);}
+
+
+
+
+
+
+@keyframes modelBurst {
+  0% {
+    transform: scale(1) rotateY(0deg);
+    filter: brightness(1);
+  }
+  20% {
+    transform: scale(1.2) rotateY(180deg);
+    filter: brightness(1.4);
+  }
+  50% {
+    transform: scale(1.4) rotateY(360deg);
+    filter: brightness(1.7);
+  }
+  80% {
+    transform: scale(1.1) rotateY(540deg);
+    filter: brightness(1.3);
+  }
+  100% {
+    transform: scale(1) rotateY(720deg);
+    filter: brightness(1);
+  }
+}
+
+.header-model.model-burst {
+  animation: modelBurst 2.2s ease-in-out;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 15px #00ffcc);
+  transform-origin: center center;
+  perspective: 800px;
+}
+
+
+.header-model {
+  animation: floatModel 4s ease-in-out infinite;
+}
+
+@keyframes floatModel {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}

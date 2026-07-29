@@ -1,0 +1,303 @@
+#ui {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+
+  .card {
+    width: 90%;
+    height: 90%;
+    max-width: 360px;
+    background: rgba(0, 0, 30, 0);
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid #00bfff00;
+    box-shadow: 0 0 10px #00bfff00;
+    pointer-events: all;
+
+    .closeBtn {
+      float: right;
+      background: transparent;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    #cardTitle {
+      text-align: center;
+    }
+
+    #playersList {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 20px 40px 20px 40px;
+      gap: 2px;
+    }
+  }
+
+  #controls {
+    
+    pointer-events: all;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 10px; 
+
+    button {
+      background: rgb(0, 0, 0);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 16px;
+      margin: 1px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      border: 2px solid #00bfff;
+      box-shadow: 0 0 10px #00bfff;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #363f48;
+    }
+
+  }
+
+  #hint {  
+    background: rgba(0,0,0,0.6);  
+    color: #fff;  
+    padding: 10px 18px;  
+    border-radius: 10px;  
+    font-size: 1rem;  
+    text-align: center; 
+    pointer-events: all;
+  }
+
+}
+
+
+
+.country-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(0, 0, 0);
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    border-radius: 12px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+    border: 2px solid #00bfff;
+    box-shadow: 0 0 10px #00bfff;
+    animation: floatHeader 5s ease-in-out infinite alternate;
+    perspective: 1000px;
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            width: 55px;
+            height: 38px;
+            border-radius: 6px;
+            border: 2px solid #00bfff;
+            box-shadow: 0 0 10px #00bfff;
+        }
+
+        h2 {
+            color: #00eaff;
+            text-shadow: 0 0 10px #00eaff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.country-header model-viewer {
+    width: 90px !important;
+    height: 90px !important;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+    border: 2px solid #00bfff00;
+    box-shadow: 0 0 10px #00bfff00;
+}
+
+
+@keyframes floatHeader {
+    0% { transform: translateY(0) rotateY(0deg); }
+    50% { transform: translateY(-4px) rotateY(1.5deg); }
+    100% { transform: translateY(0) rotateY(0deg); }
+}
+
+
+.player-card {
+    width: 280px;
+    background: rgb(0, 0, 0);
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    color: #fff;
+    border-radius: 18px;
+    border: 2px solid #00bfff;
+    box-shadow: 0 0 10px #00bfff;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    position: relative;
+    overflow: hidden;
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+    0% { transform: translateY(0) rotateY(0deg); }
+    50% { transform: translateY(-8px) rotateY(2deg); }
+    100% { transform: translateY(0) rotateY(0deg); }
+}
+
+.player-card:hover {
+    transform: translateY(-6px) rotateY(6deg) scale(1.03);
+    box-shadow:
+    0 0 35px rgba(0, 255, 255, 0.4),
+    inset 0 0 25px rgba(0, 255, 255, 0.15);
+}
+
+
+.player-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(0, 255, 255, 0.3) 50%,
+    transparent 100%
+    );
+    transform: skewX(-20deg);
+    animation: shine 5s infinite linear;
+}
+
+
+.player-card {
+    transition: transform 0.6s ease, opacity 0.6s ease;
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+@keyframes shine {
+    0% { left: -75%; }
+    100% { left: 125%; }
+}
+
+
+@keyframes floatCard {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+
+
+.player-card.entering {
+  opacity: 0;
+  transform: rotateY(-90deg);
+}
+.player-card.active {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+.player-card.leaving {
+  opacity: 0;
+  transform: rotateY(90deg);
+}
+
+.player-card .player-photo {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  border: 2px solid #00bfff;
+  box-shadow: 0 0 10px #00bfff;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+.player-card:hover .player-photo {
+  transform: scale(1.05);
+}
+
+.player-card .player-info {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.95rem;
+  color: #bdefff;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+.player-card .player-info h3 {
+  color: #00eaff;
+  margin: 8px 0;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+.player-card .player-info p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+
+.nav-btn {
+  background: rgb(0, 0, 0);
+  border: 2px solid #00bfff;
+  box-shadow: 0 0 10px #00bfff;
+  backdrop-filter: blur(6px);
+  color: #ecd104;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 999;
+  
+}
+.nav-btn:hover {
+  background: rgb(0, 0, 0);
+  box-shadow: 0 0 20px rgba(200, 255, 0, 0.6);
+  transform: scale(1.1);
+}
+.nav-btn.left {
+  position: absolute;
+  left: -50px;
+}
+.nav-btn.right {
+  position: absolute;
+  right: -50px;
+}
+
+
+
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
