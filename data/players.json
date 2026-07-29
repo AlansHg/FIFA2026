@@ -2,144 +2,66 @@
   "mexico": [
     { "name": "Luis Malagón", "position": "Portero", "age": 28, "photo": "assets/images/mexico/mex_player1.jpg", "partidas":18, "goles":0, "asistidas":0, "tarjetas":0 },
     { "name": "César Montes", "position": "Defensa central", "age":28, "photo": "assets/images/mexico/mex_player2.jpg", "partidas":60, "goles":4, "asistidas":0, "tarjetas":0 },
-    { "name": "Raúl Jiménez", "position": "Delantero", "age":34 , "photo": "assets/images/mexico/mex_player3.jpg", "partidas":0, "goles":39, "asistidas":0, "tarjetas":0 },
-    { "name": "Santiago Giménez", "position": "Delantero", "age":24 , "photo": "assets/images/mexico/mex_player4.jpg", "partidas":0, "goles":0, "asistidas":0, "tarjetas":0 },
-    { "name": "Edson Álvarez", "position": "Defensa central", "age":28 , "photo": "assets/images/mexico/mex_player5.jpg", "partidas":0, "goles":0, "asistidas":0, "tarjetas":0 },
-    { "name": "Johan Vásquez", "position": "Defensa central", "age":27, "photo": "assets/images/mexico/mex_player6.jpg", "partidas":0, "goles":0, "asistidas":0, "tarjetas":0 },
-    { "name": "Carlos Alvarado", "position": "mediocampista ofensivo", "age": 27, "photo": "assets/images/mexico/mex_player7.jpg", "partidas":0, "goles":0, "asistidas":0, "tarjetas":0 },
-    { "name": "Jesús Gallardo", "position": "Defensa", "age":31 , "photo": "assets/images/mexico/mex_player8.jpg", "partidas":0, "goles":3, "asistidas":0, "tarjetas":5 },
-    { "name": "Orbelín Pineda", "position": "Centrocampista", "age":29 , "photo": "assets/images/mexico/mex_player9.jpg", "partidas":87, "goles":12, "asistidas":0, "tarjetas":0 }
+    { "name": "Raúl Jiménez", "position": "Delantero", "age":34 , "photo": "assets/images/mexico/mex_player3.jpg", "partidas":0, "goles":39, "asistidas":0, "tarjetas":0 }
   ],
   "usa": [
     { "name": "Christian Pulisic", "position": "Extremo / Mediocampista ofensivo", "age": 27, "photo": "assets/images/usa/usa_player1.jpg", "partidas": 82, "goles": 32, "asistidas": 18, "tarjetas": 3 },
     { "name": "Weston McKennie", "position": "Mediocampista", "age": 27, "photo": "assets/images/usa/usa_player2.jpg", "partidas": 62, "goles": 11, "asistidas": 8, "tarjetas": 7 },
-    { "name": "Tyler Adams", "position": "Mediocampista defensivo", "age": 26, "photo": "assets/images/usa/usa_player3.jpg", "partidas": 52, "goles": 2, "asistidas": 4, "tarjetas": 5 },
-    { "name": "Gio Reyna", "position": "Mediocampista ofensivo / Extremo", "age": 22, "photo": "assets/images/usa/usa_player4.jpg", "partidas": 32, "goles": 8, "asistidas": 6, "tarjetas": 2 },
-    { "name": "Tim Weah", "position": "Extremo derecho", "age": 25, "photo": "assets/images/usa/usa_player5.jpg", "partidas": 47, "goles": 7, "asistidas": 9, "tarjetas": 3 },
-    { "name": "Yunus Musah", "position": "Mediocampista", "age": 22, "photo": "assets/images/usa/usa_player6.jpg", "partidas": 47, "goles": 1, "asistidas": 5, "tarjetas": 4 },
-    { "name": "Ricardo Pepi", "position": "Delantero", "age": 22, "photo": "assets/images/usa/usa_player7.jpg", "partidas": 33, "goles": 13, "asistidas": 3, "tarjetas": 1 },
-    { "name": "Sergiño Dest", "position": "Lateral derecho", "age": 25, "photo": "assets/images/usa/usa_player8.jpg", "partidas": 35, "goles": 2, "asistidas": 6, "tarjetas": 4 },
-    { "name": "Antonee Robinson", "position": "Lateral izquierdo", "age": 28, "photo": "assets/images/usa/usa_player9.jpg", "partidas": 50, "goles": 4, "asistidas": 7, "tarjetas": 3 },
-    { "name": "Matt Turner", "position": "Portero", "age": 31, "photo": "assets/images/usa/usa_player10.jpg", "partidas": 52, "goles": 0, "asistidas": 0, "tarjetas": 1 }
+    { "name": "Tyler Adams", "position": "Mediocampista defensivo", "age": 26, "photo": "assets/images/usa/usa_player3.jpg", "partidas": 52, "goles": 2, "asistidas": 4, "tarjetas": 5 }
 
   ],
   "japon": [
     { "name": "Wataru Endō", "position": "Mediocentro defensivo / Central", "age": 32, "photo": "assets/images/japon/jpn_player1.jpg", "partidas": 71, "goles": 4, "asistidas": "0", "tarjetas": "0" },
     { "name": "Takehiro Tomiyasu", "position": "Defensa central / Lateral derecho", "age": 27, "photo": "assets/images/japon/jpn_player2.jpg", "partidas": 42, "goles": 1, "asistidas": "0", "tarjetas": "0" },
-    { "name": "Takefusa Kubo", "position": "Extremo derecho / Mediapunta", "age": 24, "photo": "assets/images/japon/jpn_player3.jpg", "partidas": 46, "goles": 7, "asistidas": "0", "tarjetas": "0" },
-    { "name": "Ritsu Dōan", "position": "Extremo derecho / Mediapunta", "age": 27, "photo": "assets/images/japon/jpn_player4.jpg", "partidas": 57, "goles": 12, "asistidas": "0", "tarjetas": "0" },
-    { "name": "Kaoru Mitoma", "position": "Extremo izquierdo", "age": 28, "photo": "assets/images/japon/jpn_player5.jpg", "partidas": 29, "goles": 8, "asistidas": "0", "tarjetas": "0" },
-    { "name": "Takumi Minamino", "position": "Mediapunta / Extremo", "age": 30, "photo": "assets/images/japon/jpn_player6.jpg", "partidas": 71, "goles": 0 , "asistidas": "0", "tarjetas": "0" },
-    { "name": "Kyōgo Furuhashi", "position": "Delantero", "age": 30, "photo": "assets/images/japon/jpn_player7.jpg", "partidas": 23, "goles": 5, "asistidas": "0", "tarjetas": "0" },
-    { "name": "Daizen Maeda", "position": "Delantero / Extremo", "age": 28, "photo": "assets/images/japon/jpn_player8.jpg", "partidas": 25, "goles": 4, "asistidas": "0", "tarjetas": "0" },
-    { "name": "Daichi Kamada", "position": "Mediocentro / Mediapunta", "age": 29, "photo": "assets/images/japon/jpn_player9.jpg", "partidas": 46, "goles": 11, "asistidas": "0", "tarjetas": "0" },
-    { "name": "Zion Suzuki", "position": "Portero", "age": 23, "photo": "assets/images/japon/jpn_player10.jpg", "partidas": 21, "goles": 0, "asistidas": 0, "tarjetas": "0" }
+    { "name": "Takefusa Kubo", "position": "Extremo derecho / Mediapunta", "age": 24, "photo": "assets/images/japon/jpn_player3.jpg", "partidas": 46, "goles": 7, "asistidas": "0", "tarjetas": "0" }
   ],
   "argentina":[
     { "name": "Lionel Messi", "position": "Delantero / Mediapunta", "age": 38, "photo": "assets/images/argentina/arg_player1.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas": 0 },
     { "name": "Lautaro Martínez", "position": "Delantero", "age": 27, "photo": "assets/images/argentina/arg_player2.jpeg", "partidas":0, "goles":0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Ángel Di María", "position": "Extremo / Mediapunta", "age": 36, "photo": "assets/images/argentina/arg_player3.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Rodrigo De Paul", "position": "Mediocentro / Interior", "age": 30, "photo": "assets/images/argentina/arg_player4.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas":0 },
-    { "name": "Enzo Fernández", "position": "Mediocentro", "age": 23, "photo": "assets/images/argentina/arg_player5.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0},
-    { "name": "Nicolás Otamendi", "position": "Defensa central", "age": 37, "photo": "assets/images/argentina/arg_player6.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas": 0 },
-    { "name": "Cristian Romero", "position": "Defensa central", "age": 26, "photo": "assets/images/argentina/arg_player7.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Emiliano Martínez", "position": "Portero", "age": 32, "photo": "assets/images/argentina/arg_player8.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0},
-    { "name": "Julián Álvarez", "position": "Delantero / segundo delantero", "age": 26, "photo": "assets/images/argentina/arg_player9.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 }
+    { "name": "Ángel Di María", "position": "Extremo / Mediapunta", "age": 36, "photo": "assets/images/argentina/arg_player3.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 }
   ],
   "australia":[
     { "name": "Mathew Leckie", "position": "Extremo / Delantero", "age": 34, "photo": "assets/images/australia/aus_player1.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas": 0 },
     { "name": "Aaron Mooy", "position": "Mediocentro", "age": 33, "photo": "assets/images/australia/aus_player2.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Jackson Irvine", "position": "Mediocentro", "age": 31, "photo": "assets/images/australia/aus_player3.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas":0 },
-    { "name": "Awer Mabil", "position": "Extremo", "age": 27, "photo": "assets/images/australia/aus_player4.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Tom Rogic", "position": "Mediapunta", "age": 31, "photo": "assets/images/australia/aus_player5.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas": 0 },
-    { "name": "Mathew Ryan", "position": "Portero", "age": 32, "photo": "assets/images/australia/aus_player6.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Trent Sainsbury", "position": "Defensa central", "age": 33, "photo": "assets/images/australia/aus_player7.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas":0 },
-    { "name": "Jamie Maclaren", "position": "Delantero", "age": 30, "photo": "assets/images/australia/aus_player8.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Ajdin Hrustic", "position": "Mediocampista ofensivo", "age": 27, "photo": "assets/images/australia/aus_player9.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas":0 }
+    { "name": "Jackson Irvine", "position": "Mediocentro", "age": 31, "photo": "assets/images/australia/aus_player3.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas":0 }
   ],
   "brazil":[
     { "name": "Neymar Jr.", "position": "Extremo / Mediapunta", "age": 33, "photo": "assets/images/brazil/bra_player1.jpeg", "partidas": 0, "goles":0, "asistidas":0, "tarjetas": 0 },
     { "name": "Vinícius Júnior", "position": "Extremo izquierdo", "age": 25, "photo": "assets/images/brazil/bra_player2.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Rodrygo", "position": "Extremo / Delantero", "age": 24, "photo": "assets/images/brazil/bra_player3.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas":0 },
-    { "name": "Gabriel Jesus", "position": "Delantero", "age": 27, "photo": "assets/images/brazil/bra_player4.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas":0 },
-    { "name": "Marquinhos", "position": "Defensa central", "age": 30, "photo": "assets/images/brazil/bra_player5.jpeg", "partidas":0, "goles":0, "asistidas":0, "tarjetas": 0},
-    { "name": "Thiago Silva", "position": "Defensa central", "age": 41, "photo": "assets/images/brazil/bra_player6.jpeg", "partidas":0, "goles": 0, "asistidas":0, "tarjetas":0 },
-    { "name": "Casemiro", "position": "Mediocentro defensivo", "age": 32, "photo": "assets/images/brazil/bra_player7.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Alisson Becker", "position": "Portero", "age": 32, "photo": "assets/images/brazil/bra_player8.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0},
-    { "name": "Antony", "position": "Extremo derecho", "age": 26, "photo": "assets/images/brazil/bra_player9.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas": 0 }
+    { "name": "Rodrygo", "position": "Extremo / Delantero", "age": 24, "photo": "assets/images/brazil/bra_player3.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas":0 }
   ],
   "canada":[
     { "name": "Jonathan David", "position": "Delantero", "age": 25, "photo": "assets/images/canada/can_player1.jpeg", "partidas":0, "goles": 0, "asistidas": 0, "tarjetas": 0},
     { "name": "Alphonso Davies", "position": "Lateral izquierdo / Extremo", "age": 24, "photo": "assets/images/canada/can_player2.jpeg", "partidas":0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Cyle Larin", "position": "Delantero", "age": 29, "photo": "assets/images/canada/can_player3.jpeg", "partidas":0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Tajon Buchanan", "position": "Extremo / Winger", "age": 25, "photo": "assets/images/canada/can_player4.jpeg", "partidas": 0, "goles":0, "asistidas": 0, "tarjetas":0 },
-    { "name": "Stephen Eustaquio", "position": "Mediocentro", "age": 26, "photo": "assets/images/canada/can_player5.jpeg", "partidas":0, "goles":0, "asistidas": 0, "tarjetas":0 },
-    { "name": "Samuel Piette", "position": "Mediocentro defensivo", "age": 31, "photo": "assets/images/canada/can_player6.jpeg", "partidas":0, "goles":0, "asistidas":0, "tarjetas": 0 },
-    { "name": "Alistair Johnston", "position": "Lateral derecho", "age": 28, "photo": "assets/images/canada/can_player7.jpeg", "partidas":0, "goles":0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Liam Millar", "position": "Extremo", "age": 25, "photo": "assets/images/canada/can_player8.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Milan Borjan", "position": "Portero", "age": 36, "photo": "assets/images/canada/can_player9.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 }
+    { "name": "Cyle Larin", "position": "Delantero", "age": 29, "photo": "assets/images/canada/can_player3.jpeg", "partidas":0, "goles": 0, "asistidas": 0, "tarjetas": 0 }
   ],
   "korea":[
     { "name": "Son Heung-min", "position": "Delantero / Extremo", "age": 33, "photo": "assets/images/korea/kor_player1.jpeg", "partidas":0, "goles":0, "asistidas": 0, "tarjetas": 0 },
     { "name": "Hwang Hee-chan", "position": "Delantero", "age": 29, "photo": "assets/images/korea/kor_player2.jpeg", "partidas":0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Paik Seung-ho", "position": "Mediocentro", "age": 26, "photo": "assets/images/korea/kor_player3.jpeg", "partidas": 0, "goles":0, "asistidas": 0, "tarjetas":0 },
-    { "name": "Kim Min-jae", "position": "Defensa central", "age": 27, "photo": "assets/images/korea/kor_player4.jpeg", "partidas":0, "goles": 0, "asistidas": 0, "tarjetas":0 },
-    { "name": "Hwang In-beom", "position": "Mediocentro", "age": 27, "photo": "assets/images/korea/kor_player5.jpeg", "partidas": 0, "goles":0, "asistidas": 0, "tarjetas":0 },
-    { "name": "Kim Jin-su", "position": "Lateral izquierdo", "age": 31, "photo": "assets/images/korea/kor_player6.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas": 0 },
-    { "name": "Jo Hyeon-woo", "position": "Portero", "age": 33, "photo": "assets/images/korea/kor_player7.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Lee Kang-in", "position": "Mediapunta", "age": 23, "photo": "assets/images/korea/kor_player8.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas": 0 },
-    { "name": "Moon Seon-min", "position": "Extremo", "age": 32, "photo": "assets/images/korea/kor_player9.jpeg", "partidas":0, "goles": 0, "asistidas":0, "tarjetas": 0 }
+    { "name": "Paik Seung-ho", "position": "Mediocentro", "age": 26, "photo": "assets/images/korea/kor_player3.jpeg", "partidas": 0, "goles":0, "asistidas": 0, "tarjetas":0 }
   ],
   "ecuador":[
     { "name": "Enner Valencia", "position": "Delantero", "age": 36, "photo": "assets/images/ecuador/ecu_player1.jpeg", "partidas":0, "goles": 0, "asistidas":0, "tarjetas":0 },
     { "name": "Gonzalo Plata", "position": "Extremo", "age": 25, "photo": "assets/images/ecuador/ecu_player2.jpeg", "partidas":0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Pervis Estupiñán", "position": "Lateral izquierdo", "age": 27, "photo": "assets/images/ecuador/ecu_player3.jpeg", "partidas": 0, "goles":0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Angelo Preciado", "position": "Lateral derecho", "age": 26, "photo": "assets/images/ecuador/ecu_player4.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas": 0 },
-    { "name": "Moisés Caicedo", "position": "Mediocentro", "age": 22, "photo": "assets/images/ecuador/ecu_player5.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Angel Mena", "position": "Extremo", "age": 34, "photo": "assets/images/ecuador/ecu_player6.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Felipe Caicedo", "position": "Delantero", "age": 36, "photo": "assets/images/ecuador/ecu_player7.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas": 0 },
-    { "name": "Jackson Porozo", "position": "Defensa central", "age": 24, "photo": "assets/images/ecuador/ecu_player8.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Byron Castillo", "position": "Lateral derecho", "age": 26, "photo": "assets/images/ecuador/ecu_player9.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 }
+    { "name": "Pervis Estupiñán", "position": "Lateral izquierdo", "age": 27, "photo": "assets/images/ecuador/ecu_player3.jpeg", "partidas": 0, "goles":0, "asistidas": 0, "tarjetas": 0 }
   ],
   "iran":[
     { "name": "Alireza Jahanbakhsh", "position": "Extremo", "age": 31, "photo": "assets/images/iran/irn_player1.jpeg", "partidas":0, "goles": 0, "asistidas": 0, "tarjetas":0 },
     { "name": "Sardar Azmoun", "position": "Delantero", "age": 30, "photo": "assets/images/iran/irn_player2.jpeg", "partidas": 0, "goles":0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Mehdi Taremi", "position": "Delantero", "age": 31, "photo": "assets/images/iran/irn_player3.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Alireza Beiranvand", "position": "Portero", "age": 31, "photo": "assets/images/iran/irn_player4.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Ehsan Hajsafi", "position": "Defensa / Mediocentro", "age": 34, "photo": "assets/images/iran/irn_player5.jpeg", "partidas": 0, "goles":0, "asistidas":0, "tarjetas": 0 },
-    { "name": "Ramin Rezaeian", "position": "Lateral derecho", "age": 34, "photo": "assets/images/iran/irn_player6.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Majid Hosseini", "position": "Defensa central", "age": 29, "photo": "assets/images/iran/irn_player7.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Saeid Ezatolahi", "position": "Mediocentro", "age": 29, "photo": "assets/images/iran/irn_player8.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0},
-    { "name": "Mehdipour ", "position": "Portero", "age": 32, "photo": "assets/images/iran/irn_player9.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 }
+    { "name": "Mehdi Taremi", "position": "Delantero", "age": 31, "photo": "assets/images/iran/irn_player3.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 }
   ],
   "jordan":[
     { "name": "Baha' Faisal", "position": "Delantero", "age": 29, "photo": "assets/images/jordan/jor_player1.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
     { "name": "Yazan Al-Naimat", "position": "Extremo", "age": 23, "photo": "assets/images/jordan/jor_player2.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Hamza Al-Dardour", "position": "Delantero", "age": 33, "photo": "assets/images/jordan/jor_player3.jpeg", "partidas":0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Anas Bani Yaseen", "position": "Defensa", "age": 35, "photo": "assets/images/jordan/jor_player5.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas":0 },
-    { "name": "Mohammad Abu Zrayq", "position": "Extremo", "age": 25, "photo": "assets/images/jordan/jor_player6.jpeg", "partidas":0, "goles":0, "asistidas":0, "tarjetas":0 },
-    { "name": "Ahmed Samir", "position": "Mediocentro", "age": 28, "photo": "assets/images/jordan/jor_player7.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Oday Dabbagh", "position": "Delantero", "age": 26, "photo": "assets/images/jordan/jor_player8.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas":0 },
-    { "name": "Khalil Bani Attiah", "position": "Mediocentro", "age": 33, "photo": "assets/images/jordan/jor_player9.jpeg", "partidas":0, "goles":0, "asistidas": 0, "tarjetas": 0 }
+    { "name": "Hamza Al-Dardour", "position": "Delantero", "age": 33, "photo": "assets/images/jordan/jor_player3.jpeg", "partidas":0, "goles": 0, "asistidas": 0, "tarjetas": 0 }
   ],
   "newzealand":[
     { "name": "Chris Wood", "position": "Delantero", "age": 33, "photo": "assets/images/newzealand/nz_player1.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
     { "name": "Rohan Ricketts", "position": "Mediocentro", "age":32, "photo": "assets/images/newzealand/nz_player2.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Winston Reid", "position": "Defensa central", "age": 36, "photo": "assets/images/newzealand/nz_player3.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas": 0 },
-    { "name": "Max Mata", "position": "Delantero", "age": 25, "photo": "assets/images/newzealand/nz_player4.jpeg", "partidas": 0, "goles":0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Liberato Cacace", "position": "Lateral izquierdo", "age": 25, "photo": "assets/images/newzealand/nz_player5.jpeg", "partidas":0, "goles":0, "asistidas": 0, "tarjetas":0 },
-    { "name": "Michael Boxall", "position": "Defensa central", "age": 36, "photo": "assets/images/newzealand/nz_player6.jpeg", "partidas": 0, "goles":0, "asistidas":0, "tarjetas": 0 },
-    { "name": "Ryan Thomas", "position": "Mediocentro", "age": 30, "photo": "assets/images/newzealand/nz_player7.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Sam Sutton", "position": "Portero", "age": 27, "photo": "assets/images/newzealand/nz_player8.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 },
-    { "name": "Dylan Ruiz-Diaz", "position": "Delantero", "age": 23, "photo": "assets/images/newzealand/nz_player9.jpeg", "partidas": 0, "goles":0, "asistidas": 0, "tarjetas": 0 }
+    { "name": "Winston Reid", "position": "Defensa central", "age": 36, "photo": "assets/images/newzealand/nz_player3.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas": 0 }
   ],
   "uzbekistan":[
     { "name": "Ezgjan Alioski", "position": "Extremo / Lateral", "age": 32, "photo": "assets/images/uzbekistan/uzb_player1.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas":0 },
     { "name": "Igor Sergeev", "position": "Delantero", "age": 30, "photo": "assets/images/uzbekistan/uzb_player3.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas":0 },
-    { "name": "Shomurodov ", "position": "Delantero", "age": 29, "photo": "assets/images/uzbekistan/uzb_player4.jpeg", "partidas":0, "goles":0, "asistidas": 0, "tarjetas":0 },
-    { "name": "Mirjalol Qosimov Jr. ", "position": "Mediocentro / Extremo", "age": 28, "photo": "assets/images/uzbekistan/uzb_player5.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas":0 },
-    { "name": "Anvarjon Soliev ", "position": "Delantero", "age":30, "photo": "assets/images/uzbekistan/uzb_player6.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas":0 },
-    { "name": "Rustam Ashurmatov", "position": "Defensa central", "age": 27, "photo": "assets/images/uzbekistan/uzb_player7.jpeg", "partidas": 0, "goles": 0, "asistidas":0, "tarjetas":0 },
-    { "name": "Goalkeeper ", "position": "Portero", "age": 29, "photo": "assets/images/uzbekistan/uzb_player9.jpeg", "partidas": 0, "goles": 0, "asistidas": 0, "tarjetas": 0 }
-  ]
+    { "name": "Shomurodov ", "position": "Delantero", "age": 29, "photo": "assets/images/uzbekistan/uzb_player4.jpeg", "partidas":0, "goles":0, "asistidas": 0, "tarjetas":0 }
 }
